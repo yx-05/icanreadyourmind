@@ -9,10 +9,18 @@
 <script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-fetch('http://ipwhois.app/json/')
-  .then(response => response.json())
-  .then(data => console.log(data));
+fvar ip = '118.100.112.27'; // Current IP
+var XMLHttp = new XMLHttpRequest();
 
+XMLHttp.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var json = JSON.parse(this.responseText);
+		// Country code output, field "country_code"
+		alert(json.city);
+	}
+};
+XMLHttp.open("GET", "http://ipwhois.app/json/" + ip, true);
+XMLHttp.send();
 </script>
 http://ipwhois.app/json/"
 </body>
