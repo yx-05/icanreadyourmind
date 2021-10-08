@@ -16,13 +16,12 @@ let a = 0;
 
 for (let i = 0; i <= 4; i++) {
     tl1.add({
-        delay: 500,
         targets: words1[i],
         opacity: [
-            { value: 1, duration: 2000, endDelay: 3000 },
-            { value: 0, duration: 1000 },
+            { value: 1, duration: 500, endDelay: 1500 },
+            { value: 0, duration: 500 },
         ],
-        endDelay: 1000,
+        endDelay: 500,
         complete: function () {
             a += 1;
             if (a === 5) {
@@ -66,8 +65,8 @@ function quesAnimation() {
         autoplay: true,
         targets: ques[b],
         opacity: 1,
-        delay: 1000,
-        duration: 10000
+        delay: 500,
+        duration: 1000
     })
 }
 
@@ -92,13 +91,13 @@ function result() {
     let a = 0;
     for (let i = 0; i < words2.length; i++) {
         tl2.add({
-            delay: 500,
+            delay: 100,
             targets: words2[i],
             opacity: [
-                { value: 1, duration: 2000, endDelay: 3000 },
-                { value: 0, duration: 1000 },
+                { value: 1, duration: 500, endDelay: 2000 },
+                { value: 0, duration: 500 },
             ],
-            endDelay: 1000,
+            endDelay: 500,
             complete: function () {
                 a += 1;
                 if (a === words2.length) {
