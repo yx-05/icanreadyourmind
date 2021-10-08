@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nova+Mono&family=Share+Tech&display=swap");
 * {
   margin: 0;
@@ -19,8 +18,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0e0e1a), to(#313796));
-  background: linear-gradient(#0e0e1a, #313796);
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#00042b));
+  background: linear-gradient(#000000, #00042b);
 }
 
 .iconbackground {
@@ -35,23 +34,25 @@ body {
 
 .iconbackground i {
   color: rgba(255, 255, 255, 0.05);
-  font-size: 4em;
+  font-size: 10vh;
   position: relative;
   z-index: 0;
+  overflow: hidden;
   -webkit-animation: fading 2s infinite alternate;
           animation: fading 2s infinite alternate;
 }
 
 .iconbackground i:nth-child(12) {
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 4em;
-  font-family: "AR PL UKai CN﻿", "regular script", "kaiti", "kaishu", "zhengshu", "zhengkai", cursive;
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 3em;
+  font-family: 'Share Tech', sans-serif, cursive;
   font-style: normal;
   font-weight: bold;
   position: absolute;
   z-index: 0;
   -webkit-animation: fading 2s infinite alternate;
           animation: fading 2s infinite alternate;
+  overflow: hidden;
 }
 
 @-webkit-keyframes fading {
@@ -68,7 +69,7 @@ body {
 
 footer {
   bottom: 0px;
-  width: 100%;
+  width: 100vw;
   height: 10%;
   position: absolute;
   -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -103,10 +104,11 @@ footer {
   opacity: 0.3;
 }
 
-.wordcontainer1 {
+.wordcontainer1, .wordcontainer2 {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 90%;
+  top: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,12 +118,180 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   z-index: 1;
-  font-size: 5em;
+  font-size: 12vh;
 }
 
-.wordcontainer1 span {
+.wordcontainer1 span, .wordcontainer2 span {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  color: #777777;
   position: absolute;
   opacity: 0;
+}
+
+.six {
+  bottom: 0vh;
+}
+
+.startbutton {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 2px solid #31858b;
+  border-radius: 25px;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.startbutton:hover {
+  color: #343653;
+  background-color: #00afaf;
+  -webkit-box-shadow: 0px 0px 40px 5px #00b1b1;
+          box-shadow: 0px 0px 40px 5px #00b1b1;
+}
+
+.ques {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.question {
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+}
+
+.questext {
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  font-size: 10vh;
+  color: #6c7cb3;
+  font-family: 'Nova Mono';
+}
+
+.quescontainer {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.sel, .lastsel {
+  width: 15%;
+  height: 15vw;
+  margin: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5vh;
+  font-family: 'Share Tech', sans-serif;
+  color: white;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 3px solid #0075fc;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  -webkit-box-shadow: 5px 5px 25px 5px rgba(37, 182, 226, 0.582);
+          box-shadow: 5px 5px 25px 5px rgba(37, 182, 226, 0.582);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.sel:hover, .lastsel:hover {
+  width: 18%;
+  height: 18vw;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.wordcontainer2 {
+  display: none;
+}
+
+.outro {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  top: 0%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 12vh;
+}
+
+.outro span {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-family: 'Nova Mono';
+  position: relative;
+}
+
+.outrotxt {
+  color: #a3a3a3;
+}
+
+.btn {
+  opacity: 0;
+}
+
+.btn a {
+  padding: 10px;
+  font-size: 7vh;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #00c2fd;
+  border-radius: 20px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.outro span a:hover {
+  color: black;
+  background-color: #00c2fd;
 }
 /*# sourceMappingURL=style.css.map */

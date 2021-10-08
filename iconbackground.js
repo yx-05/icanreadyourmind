@@ -10,7 +10,7 @@ for(let i=0; i<icons.length; i++){
 
 
 setInterval(function(){
-    let random = Math.floor(Math.random() * 90) + 1;
+    let random = Math.floor(Math.random() * 85) + 1;
     let random2 = Math.floor(Math.random() * 79) + 1;
     icons[11].style.left = random + "vw";
     icons[11].style.top = random2 + "vh";

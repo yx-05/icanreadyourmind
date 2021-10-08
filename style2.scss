@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&family=Press+Start+2P&family=Source+Code+Pro:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(50deg,#171224, #01005E, #22267B, #28518A);
+}
+
+h1{
+    margin-top: 10vh;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 5rem ;
+    text-align: center;
+    color: #000544;
+    width: 80%;
+}
+
+#protect{
+    background: -webkit-linear-gradient(#eee, #575757);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#mind{
+    color: rgb(251, 255, 0);
+    text-shadow: 0px 0px 70px rgb(255, 251, 3);
+}
+
+div{
+    margin: 7vh;
+    padding: 2vh;
+    text-align: center;
+    width: 65%;
+}
+
+h2{
+    margin: 2vh;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: #17B794;
+}
+
+p{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2rem;
+    color: rgb(141, 141, 141);
+}
+
+img, iframe{
+    height: 42vh;
+    width: 36vw;
+    border-radius: 20px;
+}
+
+.lastgif{
+    margin-bottom: 20vh;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0px -10px 10px rgba(255,255,255,0.08);
+}
+
+footer img{
+    position: relative;
+    width: 8vw;
+    height: 8vh;
+    padding: 1vw;
+    object-fit: contain;
+    transition: 0.3s
+}
+
+footer img:hover{
+    opacity: 0.3;
+}
+
+i.material-icons{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    text-align: center;
+    color:rgba(146, 146, 146, 0.1);
+    text-shadow: 0px 0px 10px rgba(146, 146, 146, 0.1);
+    font-size: 1em;
+    animation: flying 50s linear infinite;
+    overflow: hidden;
+}
+
+@for $i from 1 through 3 {
+    .material-icons:nth-child(#{$i}) {
+      font-size: 5em*$i;
+      transform: translateY(-40vh *$i);
+    }
+}
+
+@keyframes flying{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+    
+    100%{
+        bottom: 100%;
+        opacity: 0;
+    }
+}
