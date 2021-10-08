@@ -101,7 +101,7 @@ function result() {
             endDelay: 1000,
             complete: function () {
                 a += 1;
-                if (a === words2.length - 1) {
+                if (a === words2.length) {
                     console.log("hi");
                     wordlist2.style.display = "none";
                     outro.style.display = "flex";
