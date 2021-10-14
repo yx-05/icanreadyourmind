@@ -98,6 +98,7 @@ function result() {
                 { value: 0, duration: 500 },
             ],
             endDelay: 500,
+            easing: "easeOutBounce",
             complete: function () {
                 a += 1;
                 if (a === words2.length) {
@@ -113,6 +114,11 @@ function result() {
 
 var textWrapper = document.querySelector('.outrotxt');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+document.querySelectorAll(".letter").forEach(span =>
+    {
+        span.style.margin = 0;
+    }
+)
 
 var tl3 = anime.timeline({autoplay:false});
   tl3.add({
