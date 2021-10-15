@@ -28,7 +28,7 @@ h1{
 
 .truth{
     margin-bottom: 1vh;
-    font-family: 'Balsamiq Sans', cursive;;
+    font-family: 'Balsamiq Sans', cursive;
     font-size: 1.3rem;
     color: rgb(129, 129, 129)
 }
@@ -72,8 +72,43 @@ img, iframe{
     border-radius: 20px;
 }
 
-.lastgif{
-    margin-bottom: 15vh;
+.gif{
+    width: 36vw;
+    margin: 0;
+}
+
+.srctext{
+    font-size: 2.5vh;
+    font-family: 'Balsamiq Sans', cursive;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.button{
+    width: 15vw;
+    height: 10vh;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(175, 0, 175);
+    border-radius: 15px;
+    border: 3px solid rgb(175, 0, 175);
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.2s linear;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button p{
+    font-size: 4vh;
+}
+
+.button:hover{
+    background-color: rgb(175, 0, 175);
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.8);
 }
 
 footer{
